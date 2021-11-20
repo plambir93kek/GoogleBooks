@@ -20,7 +20,6 @@ const BookPage = () => {
 
     useEffect(() => {
         dispatch(setEnableSearch(false));
-        console.log(book?.volumeInfo.description)
     }, []);
 
     return (
