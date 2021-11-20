@@ -81,3 +81,7 @@ export const LoadMoreButton = styled.button`
 export const LoadButtonContainer = styled.div`
   margin: 20px auto;
 `;
+
+export const TotalItems = styled.p`
+ border-bottom: 1px solid #1976d2;
+`;

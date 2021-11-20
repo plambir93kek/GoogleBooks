@@ -4,7 +4,7 @@ import { fetchBooks } from '../../store/bookReducer/booksApi';
 import { setEnableSearch, setStartIndex } from '../../store/searchReducer/searchReducer';
 import { booksSelectors } from '../../store/store';
 import BookItem from '../BookItem/BookItem';
-import { BooksContainer, LoadButtonContainer, Loader, LoaderContainter, LoaderText, LoadMoreButton, MainContainer, MainWrapper} from './styled-components/MainPage';
+import { BooksContainer, LoadButtonContainer, Loader, LoaderContainter, LoaderText, LoadMoreButton, MainContainer, MainWrapper, TotalItems} from './styled-components/MainPage';
 
 //Главная страница с выкладкой карточек книг и кнопкой Load More.
 const MainPage = () => {
@@ -12,7 +12,7 @@ const MainPage = () => {
     const books = Object.values(useAppSelector(booksSelectors.selectEntities));
     const loading = useAppSelector(state => state.books.loading);
     const {name, category, sorting, startIndex} = useAppSelector(state => state.search)
-    const {loadingMore, noResults, noMoreResults} = useAppSelector(state=> state.books);
+    const {loadingMore, noResults, noMoreResults, totalItems} = useAppSelector(state=> state.books);
     const dispatch = useAppDispatch();
 
   
@@ -35,6 +35,7 @@ const MainPage = () => {
                 </LoaderContainter>
             }
             <MainWrapper loading={loading}>
+                {totalItems !== '0' && <TotalItems>Total items: {totalItems}</TotalItems>}
             <BooksContainer>
                 {books?.map(book =>
                     <BookItem

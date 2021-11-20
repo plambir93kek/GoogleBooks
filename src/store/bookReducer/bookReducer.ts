@@ -51,6 +51,7 @@ const bookReducer = createSlice({
               state.noResults=false;
               state.totalItems=action.payload.totalItems;
               state.noMoreResults = false;
+              state.totalItems = action.payload.totalItems;
             } catch(e){
               state.noResults=true;
               state.totalItems='0';
