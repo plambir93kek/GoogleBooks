@@ -35,24 +35,17 @@ export const Description = styled.p`
   padding: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  max-height: 22px;
-  height: 22px;
-  -webkit-line-clamp: 2; 
-  -webkit-box-orient: vertical;
+  height:22px;
 `;
 
-export const BookTitle = styled.p`
+export const BookTitle = styled.div`
  font-size: 20px;
  font-weight: bold;
  margin: 10px;
- overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  max-height: 57px;
-  height: 57px;
-  -webkit-line-clamp: 3; 
-  -webkit-box-orient: vertical;
+ height: 57px;
+ text-overflow: ellipsis;
+ overflow:hidden;
+
 `;
 
 export const Category = styled.p`

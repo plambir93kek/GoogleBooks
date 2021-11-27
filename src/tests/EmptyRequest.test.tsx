@@ -12,7 +12,6 @@ test('test empty input request', async () => {
             <App />
         </Provider>
     )
-const searchInput = screen.getByPlaceholderText(/search/i);
 const searchIcon = screen.getByLabelText(/search/i);
 
 userEvent.click(searchIcon);

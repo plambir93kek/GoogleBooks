@@ -38,7 +38,7 @@ export const SearchOption = styled.div`
   gap: 10px;
   @media(max-width: 350px){
     flex-direction: column;
-    gap: 0px;
+    gap: 2px;
   }
 `;
 

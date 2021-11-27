@@ -25,6 +25,7 @@ export const fetchBooks = createAsyncThunk<
                 startIndex
             }
         });
+        console.log(response.data)
         return response.data;
     }
 );
