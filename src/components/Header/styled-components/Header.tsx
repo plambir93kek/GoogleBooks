@@ -38,12 +38,16 @@ export const SearchOption = styled.div`
   gap: 10px;
   @media(max-width: 350px){
     flex-direction: column;
-    gap: 2px;
+   gap: 5px;
+    
   }
 `;
 
 export const LabelSearch = styled.p`
-   
+   margin-right: 10px;
+   @supports(gap: 3px){
+      margin-right:0px
+    }
 `;
 
 export const SearchIconContainer = styled.div`

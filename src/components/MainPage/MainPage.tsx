@@ -27,7 +27,7 @@ const MainPage = () => {
 
     return (
         <MainContainer>
-            {noResults && <h3 style={{textAlign:'center'}}>nothing was found for your query</h3>}
+            {(noResults && !loading) && <h3 style={{textAlign:'center'}}>nothing was found for your query</h3>}
             {loading &&
                 <LoaderContainter>
                     <LoaderText>Loading...</LoaderText>

@@ -17,7 +17,8 @@ const BookItem: React.FC<BookItemProps> = ({ authors, title, categories, id, ima
     const navigate = useNavigate();
     const goToBook = () => {
         navigate(`book/${id}`)
-    }
+    };
+    const authorsText = `${authors?.map(author => `${author} `)}`
 
     return (
         <BookContainter onClick={goToBook}>
@@ -26,7 +27,9 @@ const BookItem: React.FC<BookItemProps> = ({ authors, title, categories, id, ima
             <BookTitle aria-label='title'>
                 <TextTruncate line={2} element="span" truncateText="..." text={title} />
             </BookTitle>
-            <Description>{authors?.map(author => `${author} `)}</Description>
+            <Description>
+               {authors?.map(author => `${author} `)}
+            </Description>
 
         </BookContainter>
     )

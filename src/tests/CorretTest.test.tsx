@@ -45,11 +45,11 @@ test('test correct input and response', async () => {
     const searchIcon = screen.getByLabelText(/search/i);
     userEvent.type(searchInput, 'codes');
     userEvent.click(searchIcon);
-    const author = await screen.findByText('One');
-    expect(author).toBeInTheDocument();
+    const title = await screen.findByLabelText('title');
+    expect(title).toBeInTheDocument();
 
     //Роутинг на BookBage
-    userEvent.click(author)
+    userEvent.click(title)
     const description = screen.getByText(/description/i);
     expect(description).toBeInTheDocument()
    

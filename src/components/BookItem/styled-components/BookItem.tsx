@@ -33,9 +33,10 @@ export const BookImage = styled.img`
 export const Description = styled.p`
   margin:0;
   padding: 2px;
-  overflow: hidden;
+  height:20px;
+  white-space: nowrap; 
+  overflow: hidden; 
   text-overflow: ellipsis;
-  height:22px;
 `;
 
 export const BookTitle = styled.div`
@@ -44,8 +45,7 @@ export const BookTitle = styled.div`
  margin: 10px;
  height: 57px;
  text-overflow: ellipsis;
- overflow:hidden;
-
+ overflow: hidden;
 `;
 
 export const Category = styled.p`
